@@ -1,0 +1,41 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+.cache/
+
+# Strapi
+.tmp/
+*.db
+*.db-journal
+database/*.db
+database/*.db-journal
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE (uncomment if you want to ignore)
+# .vscode/
+# .idea/
+
+# Testing / coverage
+coverage/
+.nyc_output/
+
+# Optional: ignore uploaded media (uncomment if media is stored elsewhere)
+# public/uploads/

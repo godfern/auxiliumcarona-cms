@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_images_event_images",
+  "info": {
+    "displayName": "eventImages"
+  },
+  "options": {},
+  "attributes": {
+    "imagesUrl1": {
+      "type": "string"
+    },
+    "imagesUrl2": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
