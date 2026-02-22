@@ -11,11 +11,17 @@
   },
   "pluginOptions": {},
   "attributes": {
+    "eventDate": {
+      "type": "date"
+    },
     "Title": {
       "type": "string"
     },
-    "eventDate": {
-      "type": "date"
+    "description": {
+      "type": "richtext",
+      "required": true,
+      "minLength": 100,
+      "maxLength": 1500
     },
     "subTitle": {
       "type": "string"
@@ -24,9 +30,6 @@
       "type": "component",
       "component": "images.event-images",
       "repeatable": false
-    },
-    "description": {
-      "type": "text"
     },
     "slug": {
       "type": "uid",
@@ -43,6 +46,13 @@
     "isUpcoming": {
       "type": "boolean",
       "default": true
+    },
+    "eventType": {
+      "type": "enumeration",
+      "enum": [
+        "Event",
+        "News"
+      ]
     }
   }
 }

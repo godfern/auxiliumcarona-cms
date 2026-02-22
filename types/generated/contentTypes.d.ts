@@ -444,8 +444,14 @@ export interface ApiEventEvent extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    description: Schema.Attribute.Text;
+    description: Schema.Attribute.RichText &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 1500;
+        minLength: 100;
+      }>;
     eventDate: Schema.Attribute.Date;
+    eventType: Schema.Attribute.Enumeration<['Event', 'News']>;
     gallery: Schema.Attribute.Media<'images' | 'files', true>;
     images: Schema.Attribute.Component<'images.event-images', false>;
     isUpcoming: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
