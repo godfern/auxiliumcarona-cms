@@ -42,4 +42,5 @@ coverage/
 # public/uploads/
 
 .strapi/
+public/uploads/
 
