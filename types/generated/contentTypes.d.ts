@@ -451,9 +451,11 @@ export interface ApiEventEvent extends Struct.CollectionTypeSchema {
         minLength: 100;
       }>;
     eventDate: Schema.Attribute.Date;
+    eventMainImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
     eventType: Schema.Attribute.Enumeration<['Event', 'News']>;
     gallery: Schema.Attribute.Media<'images' | 'files', true>;
-    images: Schema.Attribute.Component<'images.event-images', false>;
     isUpcoming: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::event.event'> &

@@ -26,10 +26,16 @@
     "subTitle": {
       "type": "string"
     },
-    "images": {
-      "type": "component",
-      "component": "images.event-images",
-      "repeatable": false
+    "eventMainImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     },
     "slug": {
       "type": "uid",
