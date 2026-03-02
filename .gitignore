@@ -8,6 +8,7 @@ build/
 
 # Strapi
 .tmp/
+.strapi-updater.json
 *.db
 *.db-journal
 database/*.db
@@ -39,3 +40,6 @@ coverage/
 
 # Optional: ignore uploaded media (uncomment if media is stored elsewhere)
 # public/uploads/
+
+.strapi/
+
